@@ -1,0 +1,507 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap'); */
+
+
+*{
+    font-family: 'Poppins';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100vw;
+    height: auto;
+}
+
+.header.active{
+    background: #999;
+}
+
+.container{
+    padding: 0 7%;
+    width: 100%;
+    min-height:100vh;
+} 
+
+.header .container{
+    min-height: 8vh;
+    background: #986;
+    /* background-color: rgba(31, 30, 30, 0.24); */
+    transition: 0.3s ease background-color;
+}
+
+.fas{
+    display: block;
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* .fa-solid{
+    float: right;
+    margin:.4em;
+    cursor: pointer;
+    color: #fff;
+    top: 10%;
+} */
+
+.hidemenu{
+    max-height: 300px;
+}
+
+.navbar{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color: #fff;
+    font-size:25px;
+}
+
+.logo .span1{
+    color: crimson;
+}
+
+
+nav{
+   /* margin: 79px;  */
+}
+
+
+.nav ul{
+    /* display: none; */
+    justify-content: space-between;
+    list-style-type: none;
+    text-align: start;
+    position: fixed;
+    width: 100%;
+    flex-direction: column;
+    height: 100vh;
+    left: 60%;
+    top: 8%;
+    background:  #20272e;
+    z-index: 999;
+}
+
+.nav li a{
+    color: #fff;
+    font-size: 17px;
+    padding: 70px 0;
+}
+
+.nav li a:hover{
+    color: crimson;
+}
+
+
+/* ------- herpo section ------ */
+
+.hero{
+    background: url(images/hero2.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index:1;
+}
+
+.hero::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: black;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.hero h2{
+    color: #fff;
+    padding: 150px 0 10px;
+    font-size: 50px;
+}
+
+.hero-text{
+    color: #fff;
+    font-size: 20px;
+    padding: 20px 0 10px;
+    margin-bottom: 30px;
+}
+
+.btn{
+    display: inline-block;
+    font-size: 30px;
+    color: #fff;
+    border: 1px solid crimson;
+    background: #eee;
+    color: crimson;
+    transition: 1s ease;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn:hover{
+    background: #000;
+    color: #fff;
+}
+
+/* -------- section about -------- */
+.text-title{
+  margin: 25px  0;
+  text-align: center;  
+  font-size: 2rem;
+}
+
+.text-title span{
+    color:#4828d2;
+}
+
+.about .col-left img{
+
+}
+
+
+
+.about .container{
+    background: transparent;
+}
+
+
+img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.services .service-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    box-shadow: 10 5 0;
+}
+
+.services .service-items{
+    flex-basis: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background: url(images/hero2.jpeg);
+    z-index: 1;
+    overflow: hidden;
+    background-size: cover;
+    margin: 20px 0;
+    color: black;
+    border-radius: 22px;
+    padding: 15px;
+}
+
+.services .service-items::after{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(80deg,rgb(203, 194, 194), #485563);
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    z-index:-1;
+}
+
+.service-items h3{
+    text-transform: uppercase;
+    font-size: 1.4em;
+    text-align: start;
+}
+
+
+.service-items p{
+    font-size: 15px;
+    color: #fff;
+    padding: 10px;
+}
+
+/* ------ gallery section--------- */
+
+.gallery{
+    font-size: 12px;
+}
+
+
+.gallery .container{
+   /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  */
+}
+
+.gallery-details .images img{
+    border-radius: 40px;
+    filter: brightness(80%);
+    padding: 15px;
+}
+
+.gallery-items{
+    text-align: center;
+}
+
+.gallery-items h4{
+    color: crimson;
+    font-size: 1.6em;
+}
+
+
+.gallery-items p, del {
+    font-size: 14px;
+}
+
+
+
+/* -------- exclusivies views--------- */
+
+/* ------- contact -------- */
+
+.contact .container{
+    display:block;
+    width: 100%;
+}
+
+.contact .col-left{
+    padding: 24px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.contact .col-left form{
+    display: grid;
+    border: 1px solid #999;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+
+.contact  input{
+    padding: 15px;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    width:100% ;
+}
+
+.contact .col-left form input::placeholder {
+    color: #999;
+}
+
+
+.contact .col-left form  textarea{
+    resize: vertical;
+    min-height: 50px;
+    max-height: 150px;
+    width: 100%;
+    height: 100px;
+    margin-block-end: 10px
+}
+
+.contact .submit{
+    cursor: pointer;
+    background: skyblue;
+    font-size: 25px;border: 0;
+    color: #111;
+    padding: 10px 0;
+    border-radius: 20px;
+}
+
+.contact .submit:hover{
+    background: #666;
+    transition: 2s ease;
+    color: #fff;
+}
+
+
+.contact h2{
+    font-size: 40px;
+    margin: 10px;
+    text-align: center;
+    color: red;
+}
+
+.contact iframe{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.contact .col-right h3{
+    text-align: center;
+    font-size: 1.3rem;
+    color: #788;
+}
+
+body{max-width: 1200px;}
+
+
+/* -------media query----- */
+
+@media only screen and (min-width:768px){
+    body{width: 100%;}
+
+
+    .header{
+        width: 100%;
+    }
+
+    .header .fas{
+        display: none;
+    }
+
+    .header h1 .logo{
+        
+    }
+
+    .header .navbar{
+        padding: 15px;
+    }
+
+    .container {
+        padding: 0 7%;
+        width: 100%;
+    }
+
+    .header ul{
+        display: flex;
+        background: none;
+        flex-direction: row;
+        top: 4%;
+        left: 40%;
+        /* padding: -20px; */
+    }
+
+
+    .text-title{
+        font-size: 3.5rem;
+    }
+
+    .header li a{
+        text-transform: uppercase;
+    }
+    .header li a:hover{
+        background: black;
+        color: white;
+        border-radius: 25px;
+        transition: 1s ease;
+        /* transform: scaleX(0.6); */
+    }
+
+    .about .container{
+        display: flex;
+    }
+
+    .col-left{
+        width: 600px;
+        height: 400px;
+        padding-left: 60px;
+    }
+
+    .col-right{
+        width: 100%;
+    }
+
+    .col-right{
+        text-align: left;
+        padding: 30px;
+    }
+
+    .col-right p{
+        text-align: justify;
+    }
+
+    .services{
+        margin-top: -190px;
+    }
+
+
+    .services .service-items{
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+
+
+    .gallery .container{
+        display: grid;
+        grid-template-columns: repeat(5, minmax(200px , 1fr));
+        grid-gap: 30px;
+        padding: 12px;
+    }
+
+    .gallery .container img .images{
+        width: 100%;
+        border-radius: 10px;
+    }
+
+
+    .exclusives{
+        background: url(images/gallery13.jpg);
+        position: relative;
+        z-index: 1;
+    }
+
+    .exclusives:after{
+        content: '';
+        position: absolute;
+        background: grey;
+        opacity: 0.9;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    .exclusives .container{
+        display:grid;
+        grid-template-columns: repeat(3 , minmax(200px , 1fr));
+        /* grid-template-areas:'first first . .' 'first first . .'; */
+        grid-gap: 20px;
+        padding: 30px;
+        margin: 15px;
+    }
+
+    .exclusives img{
+        display: block;
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    .exclusives .img1{
+        grid-area: 'first';
+    } 
+
+    .contact .container{
+        display: flex;
+    }
+
+    .contact .container .col-left{
+        margin-left: 23px;
+        margin-right: 25px;
+        margin-bottom:25px;
+    }
+}
