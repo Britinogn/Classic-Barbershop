@@ -4,4 +4,18 @@ var navBar = document.getElementById("navBar");
     };
 
 
-// const header = document.getElementById("header");
+    document.addEventListener('scroll', ()=> {
+        var scroll_position = window.scrollY; 
+        if(scroll_position > 250) {
+            header.style.backgroundColor = '#777'; 
+        }
+        else{ 
+            header.style.backgroundColor = 'transparent'; 
+        }
+    });
+
+
+    // hamburger.addEventListener('click', () => {
+    //     hamburger.classList.toggle('active'); 
+    //     mobile_menu.classList.toggle('active'); 
+    // });

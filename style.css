@@ -35,8 +35,6 @@ a{
 
 .header .container{
     min-height: 8vh;
-    background: #986;
-    /* background-color: rgba(31, 30, 30, 0.24); */
     transition: 0.3s ease background-color;
 }
 
@@ -48,19 +46,6 @@ a{
     color: #fff;
     font-size: 25px;
     cursor: pointer;
-}
-
-
-/* .fa-solid{
-    float: right;
-    margin:.4em;
-    cursor: pointer;
-    color: #fff;
-    top: 10%;
-} */
-
-.hidemenu{
-    max-height: 300px;
 }
 
 .navbar{
@@ -78,37 +63,44 @@ a{
     color: crimson;
 }
 
-
-nav{
-   /* margin: 79px;  */
-}
-
-
-.nav ul{
-    /* display: none; */
+.nav{
+    position: absolute;
     justify-content: space-between;
     list-style-type: none;
     text-align: start;
     position: fixed;
-    width: 100%;
+    width: 50%;
     flex-direction: column;
     height: 100vh;
-    left: 60%;
-    top: 8%;
+    left: 0;
+    top: 48px;
     background:  #20272e;
     z-index: 999;
+    overflow: hidden;
+    transition: 1s ;
 }
+
+.hidemenu{
+    max-height: 1px;  
+}
+
+/* .nav ul li{
+    margin: 10px 0;
+    display: block;
+} */
 
 .nav li a{
     color: #fff;
+    display: block;
     font-size: 17px;
-    padding: 70px 0;
+    padding: 40px 2px;
+    font-size: 1.5em;
 }
 
 .nav li a:hover{
     color: crimson;
+    font-weight: bold;
 }
-
 
 /* ------- herpo section ------ */
 
@@ -175,9 +167,9 @@ nav{
     color:#4828d2;
 }
 
-.about .col-left img{
+/* .about .col-left img{
 
-}
+} */
 
 
 
@@ -250,9 +242,9 @@ img{
 }
 
 
-.gallery .container{
-   /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  */
-}
+/* .gallery .container{
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+} */
 
 .gallery-details .images img{
     border-radius: 40px;
@@ -356,17 +348,22 @@ img{
     color: #788;
 }
 
-body{max-width: 1200px;}
+.footer{padding-top: 45px;}
 
+.footer p{
+    text-align: center;
+    background: #000;
+    padding: 20px;
+    color: #fff;
+    font-size: 20px;
+}
 
 /* -------media query----- */
 
 @media only screen and (min-width:768px){
-    body{width: 100%;}
-
-
     .header{
         width: 100%;
+        overflow: hidden;
     }
 
     .header .fas{
@@ -374,7 +371,7 @@ body{max-width: 1200px;}
     }
 
     .header h1 .logo{
-        
+        font-size: 1.5rem;
     }
 
     .header .navbar{
@@ -386,15 +383,21 @@ body{max-width: 1200px;}
         width: 100%;
     }
 
-    .header ul{
-        display: flex;
-        background: none;
+    .header .nav ul{
+        display:flex;
         flex-direction: row;
-        top: 4%;
-        left: 40%;
-        /* padding: -20px; */
+        list-style-type: none;  
+        width: 100%;
+        overflow: hidden;
+        visibility: visible;
     }
 
+    .header .nav{background: none;
+        top:-15px;
+        left: 50%;
+        width: 100%;
+     
+    }
 
     .text-title{
         font-size: 3.5rem;
@@ -402,14 +405,11 @@ body{max-width: 1200px;}
 
     .header li a{
         text-transform: uppercase;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 35px; 
     }
-    .header li a:hover{
-        background: black;
-        color: white;
-        border-radius: 25px;
-        transition: 1s ease;
-        /* transform: scaleX(0.6); */
-    }
+    .header li a:hover{width: 100%;}
 
     .about .container{
         display: flex;
@@ -504,4 +504,5 @@ body{max-width: 1200px;}
         margin-right: 25px;
         margin-bottom:25px;
     }
+    .footer{padding-top:100px;}
 }
